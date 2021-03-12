@@ -33,6 +33,10 @@ class PostController extends Controller
         return $post;
     }
 
+    public function CategoryPosts(){
+        $post=Category::with('posts')->take(3)->get();
+        return response()->json($post);
+    }
     /**
      * Show the form for creating a new resource.
      *

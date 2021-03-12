@@ -23,3 +23,4 @@ Route::get('categoria/{id}', 'App\Http\Controllers\CategoryController@CategotyPo
 Route::apiResource('post', 'App\Http\Controllers\PostController');
 Route::get('postcategory/{id}', 'App\Http\Controllers\PostController@CategoryPost');
 Route::get('categoriesPost', 'App\Http\Controllers\PostController@CategoriesPosts');
+Route::get('categoriasposts', 'App\Http\Controllers\PostController@CategoryPosts');
