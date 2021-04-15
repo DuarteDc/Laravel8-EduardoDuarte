@@ -37,6 +37,10 @@ class PostController extends Controller
         $post=Category::with('posts')->take(3)->get();
         return response()->json($post);
     }
+    public function sliderPost(){
+        $post=Post::latest()->take(5)->orderBy('id', 'desc')->get();
+        return response()->json(['post'=>$post]);
+    }
     /**
      * Show the form for creating a new resource.
      *
